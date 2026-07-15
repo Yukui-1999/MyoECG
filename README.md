@@ -1,4 +1,4 @@
-# CardioNets
+# MyoECG
 
 This is the official implementation of our paper Cardiac MRI-informed electrocardiography enables biologically grounded cardiomyopathy detection.
 
