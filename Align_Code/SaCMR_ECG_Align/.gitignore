@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+outputs/
+data/paired_split*/
+data/paired_henan_split*/
+.pytest_cache/
+*.log

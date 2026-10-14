@@ -1,0 +1,20 @@
+# Additional dependencies for the six-model SimpleTest comparison launcher.
+# This includes the core MyoECG environment; install from the repository root.
+# It does not reproduce each vendored baseline's independent pretraining setup.
+-r requirements.txt
+
+# ECGFM-KED imports the fastai v1 layers/core API. The original root freeze
+# omitted fastai; 1.0.61 is taken from ECGFM_KED/requirements.txt (~=1.0.61),
+# not from a verified export of the authors' active environment.
+fastai==1.0.61
+
+# FG-CLEP imports Transformers even when only its ECG encoder is selected.
+# These versions are preserved from the original root requirements export.
+transformers==4.20.0
+tokenizers==0.12.1
+huggingface-hub==0.23.0
+requests==2.31.0
+
+# ECGFounder and MERL inference use the dependencies already included above.
+# For baseline-specific training, use separate environments and consult their
+# own README/requirements files; their PyTorch requirements differ from this one.

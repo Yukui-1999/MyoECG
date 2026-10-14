@@ -1,0 +1,36 @@
+# Core dependencies for MyoECG/ST-MEM inference, downstream training, and Align_Code.
+# Versions below are preserved from the authors' original requirements export.
+# Python 3.8 is the proposed reproduction target; see README.md for installation.
+# Install the matching PyTorch wheels first (CUDA 11.3 or CPU); both variants
+# satisfy the public-version pins below. No local build paths are required.
+# For all six models in scripts/simple_test_mimic.sh, install requirements-baselines.txt.
+
+# PyTorch release pair (hardware-specific wheels are selected separately).
+torch==1.12.0
+torchvision==0.13.0
+
+# Arrays, tables, signal processing, metrics, and configuration.
+numpy==1.24.4
+pandas==1.5.3
+scipy==1.9.1
+scikit-learn==1.3.2
+PyYAML==6.0.1
+einops==0.8.0
+
+# ECG/CMR data loading and Excel cohort metadata.
+wfdb==3.2.0
+nibabel==5.2.1
+openpyxl==3.1.5
+Pillow==10.3.0
+
+# CMR encoders and metric utilities used by training/alignment code.
+timm==0.9.12
+torchmetrics==0.6.0
+
+# Logging, plotting, and progress reporting.
+tensorboard==2.14.0
+protobuf==3.20.3
+matplotlib==3.7.5
+tqdm==4.66.4
+seaborn==0.13.2
+wandb==0.12.18
